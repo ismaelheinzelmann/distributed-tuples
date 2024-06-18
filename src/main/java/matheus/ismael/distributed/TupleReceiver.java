@@ -3,6 +3,7 @@ package matheus.ismael.distributed;
 import lombok.SneakyThrows;
 import matheus.ismael.distributed.messages.*;
 import org.jgroups.*;
+import org.jgroups.blocks.cs.ReceiverAdapter;
 import org.jgroups.blocks.locking.LockService;
 import org.jgroups.util.MessageBatch;
 import org.jgroups.util.Tuple;
@@ -12,10 +13,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.regex.Pattern;
 
-//QUANDO QUISER DAR UM GET, BROADCAST UMA MENSAGEM FALANDO QUERO TAL PADRAO, ONDE CADA INSTANCIA VAI TER UMA
-//LISTA DE SOLICITAÇOES, QUE CASO SUA REQUISIÇAO DE WRITE DE MATCH COM ALGUMA, ENVIA DIRETAMENTE PARA A INSTANCIA QUE ESTARA ESPERANDO E ESPERARA UM SUCESS
-public class TupleReceiver implements Receiver, Runnable {
+public class TupleReceiver  implements Receiver, Runnable {
     private final JChannel channel;
     private final ArrayList<ArrayList<String>> tupleSpace;
     private final LockService lockService;
@@ -131,6 +131,15 @@ public class TupleReceiver implements Receiver, Runnable {
             tupleSpaceLock.unlock();
         }
     }
+
+    @Override
+    public void viewAccepted(View view) {
+        synchronized (getQueue) {;
+            List<Address> members = view.getMembers();
+            getQueue.removeIf(tuple -> !members.contains(tuple.getVal2()));
+        }
+    }
+
 
     Optional<ArrayList<String>> read(String tuplePattern) {
         String[] pattern = tuplePattern.split(",");
