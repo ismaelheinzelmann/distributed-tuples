@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="07af2f46-b3d8-4234-afae-c6174633322c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/messages/GetTupleQueueMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/messages/GetTupleQueueRemovalMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/DistributedTupleSpaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/DistributedTupleSpaces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/TupleReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/TupleReceiver.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2hU6QziPUzcZgmQmg5yFv0gi6OD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.App.executor": "Debug",
+    "Application.DistributedTupleSpace.executor": "Run",
+    "Maven.distributed-tuples [clean].executor": "Run",
+    "Maven.distributed-tuples [compile].executor": "Run",
+    "Maven.distributed-tuples [install].executor": "Run",
+    "Maven.distributed-tuples [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/ismael-dev/Desktop/distributed-tuples",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="matheus.ismael.distributed.messages" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="matheus.ismael.distributed.App" />
+      <module name="distributed-tuples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="matheus.ismael.distributed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TupleReceiver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="matheus.ismael.distributed.TupleReceiver" />
+      <module name="distributed-tuples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="matheus.ismael.distributed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.TupleReceiver" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07af2f46-b3d8-4234-afae-c6174633322c" name="Changes" comment="" />
+      <created>1717636296258</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717636296258</updated>
+      <workItem from="1717636297306" duration="4346000" />
+      <workItem from="1717642113553" duration="7462000" />
+      <workItem from="1717649809939" duration="267000" />
+      <workItem from="1717675334422" duration="2622000" />
+      <workItem from="1717689748170" duration="2206000" />
+      <workItem from="1718130102735" duration="1999000" />
+      <workItem from="1718132116278" duration="3176000" />
+      <workItem from="1718143097591" duration="7405000" />
+      <workItem from="1718150783630" duration="5800000" />
+      <workItem from="1718159092900" duration="7422000" />
+      <workItem from="1718167817583" duration="686000" />
+      <workItem from="1718219861399" duration="1704000" />
+      <workItem from="1718673993666" duration="7423000" />
+      <workItem from="1718709430440" duration="3261000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/TupleReceiver.java</url>
+          <line>138</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/TupleReceiver.java</url>
+          <line>130</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/TupleReceiver.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/DistributedTupleSpaces.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
