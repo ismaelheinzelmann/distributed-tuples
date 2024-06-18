@@ -19,7 +19,7 @@ public class TupleReceiver implements Receiver, Runnable {
     private final JChannel channel;
     private final ArrayList<ArrayList<String>> tupleSpace;
     private final LockService lockService;
-    private final ArrayList<Tuple<String, Address>> getQueue;
+    private final ArrayList<Tuple<String, Address>> getQueue; //Pattern, address
 
     private final Lock tupleSpaceLock;
     private final Condition tupleSpaceCondition;
@@ -64,15 +64,11 @@ public class TupleReceiver implements Receiver, Runnable {
             }
         } else if (message instanceof GetTupleQueueMessage){
             synchronized (getQueue){
-                getQueue.add(((GetTupleQueueMessage) message).getTuple());
+                getQueue.add(new Tuple<>(((GetTupleQueueMessage) message).getPattern(), batch.getSender()));
             }
         } else if (message instanceof GetTupleQueueRemovalMessage){
             synchronized (getQueue){
-                for (Tuple<String, Address> tuple : getQueue) {
-                    if (tuple.equals(batch.getSender())) {
-                        getQueue.remove(tuple);
-                    }
-                }
+                getQueue.removeIf(tuple -> tuple.getVal2().equals(batch.getSender()));
             }
         }
     }
@@ -90,10 +86,7 @@ public class TupleReceiver implements Receiver, Runnable {
     }
 
     private void sendState(Address address) throws Exception {
-        Lock get = lockService.getLock("get-tuples");
-        Lock write = lockService.getLock("write-tuples");
-        get.lock();
-        write.lock();
+        Lock get = lockService.getLock("tuple-spaces");
         try {
             tupleSpaceLock.lock();
             try {
@@ -106,7 +99,6 @@ public class TupleReceiver implements Receiver, Runnable {
             }
         } finally {
             get.unlock();
-            write.unlock();
         }
     }
 
@@ -117,7 +109,7 @@ public class TupleReceiver implements Receiver, Runnable {
             if (tupleInSpace.isEmpty()) {
                 tupleSpace.add(writeTupleMessage.getTuple());
                 if (pattern != null && !pattern.isEmpty()) {
-                    Lock lock = lockService.getLock("get-tuples");
+                    Lock lock = lockService.getLock("tuple-spaces");
                     var test = read(pattern);
                     if (test.isPresent()) {
                         tupleSpaceCondition.signalAll();

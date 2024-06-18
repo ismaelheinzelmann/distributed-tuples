@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07af2f46-b3d8-4234-afae-c6174633322c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/messages/GetTupleQueueMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/messages/GetTupleQueueRemovalMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/DistributedTupleSpaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/DistributedTupleSpaces.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/TupleReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/TupleReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/messages/GetTupleQueueMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/messages/GetTupleQueueMessage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/ismael-dev/Desktop/distributed-tuples",
+    "last_opened_file_path": "/home/ismael/ufsc/distributed-tuples",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -131,6 +131,8 @@
       <workItem from="1718219861399" duration="1704000" />
       <workItem from="1718673993666" duration="7423000" />
       <workItem from="1718709430440" duration="3261000" />
+      <workItem from="1718727410838" duration="2138000" />
+      <workItem from="1718729559409" duration="1037000" />
     </task>
     <servers />
   </component>
@@ -155,24 +157,34 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/TupleReceiver.java</url>
-          <line>138</line>
-          <option name="timeStamp" value="88" />
+          <url>file://$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/DistributedTupleSpaces.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="93" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/TupleReceiver.java</url>
-          <line>130</line>
-          <option name="timeStamp" value="89" />
+          <line>65</line>
+          <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/TupleReceiver.java</url>
-          <line>103</line>
-          <option name="timeStamp" value="91" />
+          <line>69</line>
+          <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/DistributedTupleSpaces.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="92" />
+          <line>57</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/DistributedTupleSpaces.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/matheus/ismael/distributed/DistributedTupleSpaces.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="100" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

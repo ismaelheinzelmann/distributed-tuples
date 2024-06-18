@@ -11,5 +11,6 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GetTupleQueueMessage implements Serializable {
-    private Tuple<String, Address> tuple;
+    private String pattern;
+    private String address;
 }

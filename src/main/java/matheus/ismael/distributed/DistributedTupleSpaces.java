@@ -55,7 +55,7 @@ public class DistributedTupleSpaces {
     }
 
     public void write(List<String> tuple) throws Exception {
-        Lock lock = lockService.getLock("write-tuples");
+        Lock lock = lockService.getLock("tuple-spaces");
         lock.lock();
         try {
             synchronized (tupleSpaceLock) {
@@ -65,7 +65,8 @@ public class DistributedTupleSpaces {
                 if (tupleInSpace.isEmpty()){
                     var queuedGetRequest = tupleReceiver.getMatchingPattern(pattern);
                     if (queuedGetRequest.isPresent()){
-                        channel.send(queuedGetRequest.get().getVal2(), new WriteTupleMessage((ArrayList<String>) tuple));
+                        channel.send(new ObjectMessage(queuedGetRequest.get().getVal2(), new WriteTupleMessage(new ArrayList<>(tuple))));
+
                         //implement the send of the tuple message, the receive of the message in the requester, and the requester sending the successful for removal of the queues
                     } else {
                         tupleSpace.add(new ArrayList<>(tuple));
@@ -80,15 +81,17 @@ public class DistributedTupleSpaces {
     }
 
     public ArrayList<String> get(List<String> tuple) throws Exception {
-        Lock lock = lockService.getLock("get-tuples");
+        Lock lock = lockService.getLock("tuple-spaces");
         lock.lock();
         try {
             Optional<ArrayList<String>> result;
             tupleSpaceLock.lock();
             do {
-                result = read(String.join(",", tuple));
+                String pattern = String.join(",", tuple);
+                result = read(pattern);
                 if (result.isEmpty()) {
-                    tupleReceiver.setPattern(String.join(",", tuple));
+                    tupleReceiver.setPattern(pattern);
+                    channel.send(new ObjectMessage(null, new GetTupleQueueMessage(pattern, channel.getAddress().toString())));
                     lock.unlock();
                     tupleSpaceCondition.await();
                     lock.lock();
