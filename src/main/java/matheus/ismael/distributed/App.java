@@ -33,7 +33,13 @@ public class App {
                         distributedTupleSpaces.write(List.of(tupleInput.split(",")));
                     }
                     case read -> {
-                        System.out.println("read");
+                        String tupleInput = reader.nextLine();
+                        Optional<ArrayList<String>> test = distributedTupleSpaces.read(tupleInput);
+                        if (test.isPresent()){
+                            System.out.println(test.get());
+                        } else {
+                            System.out.println("No such element");
+                        }
                     }
                     case list -> {
                         distributedTupleSpaces.list();

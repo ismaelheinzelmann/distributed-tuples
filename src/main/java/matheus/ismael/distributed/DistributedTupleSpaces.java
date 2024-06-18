@@ -50,7 +50,7 @@ public class DistributedTupleSpaces {
         }
     }
 
-    private Optional<ArrayList<String>> read(String tuplePattern){
+    public Optional<ArrayList<String>> read(String tuplePattern){
         return tupleReceiver.read(tuplePattern);
     }
 
